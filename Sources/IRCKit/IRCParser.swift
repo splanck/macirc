@@ -97,6 +97,10 @@ extension IRCCommand {
         case "PART": self = .part
         case "PING": self = .ping
         case "PONG": self = .pong
+        case "CAP": self = .cap
+        case "AUTHENTICATE": self = .authenticate
+        case "NICK": self = .nick
+        case "USER": self = .user
         default:
             if let num = Int(raw) {
                 self = .numeric(num)

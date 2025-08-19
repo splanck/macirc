@@ -23,6 +23,10 @@ public enum IRCCommand: Equatable {
     case part
     case ping
     case pong
+    case cap
+    case authenticate
+    case nick
+    case user
     case numeric(Int)
     case other(String)
 }

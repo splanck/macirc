@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "IRCKit"),
-        .target(name: "NetKit"),
+        .target(name: "NetKit", dependencies: ["IRCKit"]),
         .target(name: "DataKit"),
         .target(name: "ThemeKit"),
         .executableTarget(
