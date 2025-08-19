@@ -9,3 +9,4 @@
 - Introduced capability negotiation with SASL PLAIN and EXTERNAL support in NetKit
 - Added integration tests using mocked server responses to verify CAP/SASL flows
 - Integration tests pass confirming successful CAP negotiation and SASL authentication
+- Introduced reducers for buffers, users, and topics with an AppStore observable object exposing unidirectional state to the UI

@@ -11,6 +11,7 @@ let package = Package(
         .library(name: "NetKit", targets: ["NetKit"]),
         .library(name: "DataKit", targets: ["DataKit"]),
         .library(name: "ThemeKit", targets: ["ThemeKit"]),
+        .library(name: "AppStore", targets: ["AppStore"]),
         .executable(name: "macIRCApp", targets: ["macIRCApp"])
     ],
     dependencies: [],
@@ -19,6 +20,7 @@ let package = Package(
         .target(name: "NetKit", dependencies: ["IRCKit"]),
         .target(name: "DataKit"),
         .target(name: "ThemeKit"),
+        .target(name: "AppStore"),
         .executableTarget(
             name: "macIRCApp",
             dependencies: ["IRCKit", "NetKit", "DataKit", "ThemeKit"]
@@ -42,6 +44,10 @@ let package = Package(
         .testTarget(
             name: "macIRCAppTests",
             dependencies: ["macIRCApp"]
+        ),
+        .testTarget(
+            name: "AppStoreTests",
+            dependencies: ["AppStore"]
         )
     ]
 )
