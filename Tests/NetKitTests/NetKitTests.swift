@@ -15,6 +15,11 @@ final class MockIRCConnection: IRCConnection {
 
     func cancel() {}
 
+    /// Convenience accessor returning all lines sent through the connection.
+    var sentLines: [String] {
+        sentData.compactMap { String(data: $0, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines) }
+    }
+
     /// Helper to feed raw data as if it was received from the network.
     func feed(_ data: Data) {
         buffer.append(data)
