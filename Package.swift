@@ -23,7 +23,7 @@ let package = Package(
         .target(name: "AppStore"),
         .executableTarget(
             name: "macIRCApp",
-            dependencies: ["IRCKit", "NetKit", "DataKit", "ThemeKit"]
+            dependencies: ["IRCKit", "NetKit", "DataKit", "ThemeKit", "AppStore"]
         ),
         .testTarget(
             name: "IRCKitTests",

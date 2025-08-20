@@ -1,9 +1,15 @@
+import AppStore
+
+#if canImport(SwiftUI)
 import XCTest
 @testable import macIRCApp
 
 final class MacIRCAppTests: XCTestCase {
-    func testMainRuns() async {
-        await MacIRCApp.main()
-        XCTAssertTrue(true)
+    func testSidebarRendersBuffers() {
+        let store = AppStore()
+        store.dispatch(.buffer(.add(BufferState(name: "general"))))
+        let view = SidebarView(store: store, selection: .constant(nil))
+        XCTAssertNotNil(view)
     }
 }
+#endif

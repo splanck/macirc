@@ -10,3 +10,5 @@
 - Added integration tests using mocked server responses to verify CAP/SASL flows
 - Integration tests pass confirming successful CAP negotiation and SASL authentication
 - Introduced reducers for buffers, users, and topics with an AppStore observable object exposing unidirectional state to the UI
+- Built SwiftUI shell with Sidebar, Transcript (TextKit bridge), and Composer views wired to AppStore for live updates
+- TODO: hook up real IRC message rendering and send logic
